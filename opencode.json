@@ -2,6 +2,8 @@
   "$schema": "https://opencode.ai/config.json",
   "provider": {
     "openrouter": {
+      "api": "https://openrouter.ai/api/v1",
+      "env": ["OPENROUTER_API_KEY"],
       "models": {
         "moonshotai/kimi-k2": {
           "options": {
@@ -16,6 +18,103 @@
     "huggingface": {
       "models": {
         "Qwen/Qwen3-235B-A22B-Instruct-2507:fireworks-ai": {}
+      }
+    },
+    "moonshot": {
+      "npm": "@ai-sdk/openai-compatible",
+      "api": "https://api.moonshot.cn/v1",
+      "env": ["MOONSHOT_API_KEY"],
+      "models": {
+        "moonshot-v1-8k": {
+          "name": "Moonshot v1 8K",
+          "release_date": "2025-01-01",
+          "attachment": false,
+          "reasoning": true,
+          "temperature": true,
+          "tool_call": true,
+          "limit": {
+            "context": 8000,
+            "output": 4096
+          },
+          "cost": {
+            "input": 12,
+            "output": 12,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        "moonshot-v1-32k": {
+          "name": "Moonshot v1 32K",
+          "release_date": "2025-01-01",
+          "attachment": false,
+          "reasoning": true,
+          "temperature": true,
+          "tool_call": true,
+          "limit": {
+            "context": 32000,
+            "output": 4096
+          },
+          "cost": {
+            "input": 12,
+            "output": 12,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        "moonshot-v1-128k": {
+          "name": "Moonshot v1 128K",
+          "release_date": "2025-01-01",
+          "attachment": false,
+          "reasoning": true,
+          "temperature": true,
+          "tool_call": true,
+          "limit": {
+            "context": 128000,
+            "output": 4096
+          },
+          "cost": {
+            "input": 12,
+            "output": 12,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        "kimi-k2-0711-preview": {
+          "name": "Kimi K2 0711 Preview",
+          "release_date": "2025-07-11",
+          "attachment": true,
+          "reasoning": true,
+          "temperature": true,
+          "tool_call": true,
+          "limit": {
+            "context": 128000,
+            "output": 8192
+          },
+          "cost": {
+            "input": 8,
+            "output": 8,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        "kimi-latest": {
+          "name": "Kimi Latest",
+          "release_date": "2025-01-01",
+          "attachment": true,
+          "reasoning": true,
+          "temperature": true,
+          "tool_call": true,
+          "limit": {
+            "context": 128000,
+            "output": 8192
+          },
+          "cost": {
+            "input": 8,
+            "output": 8,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
       }
     }
   },
